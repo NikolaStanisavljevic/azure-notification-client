@@ -1,4 +1,4 @@
-const convertedVapidKey = urlBase64ToUint8Array(process.env.REACT_APP_VAPID_KEY)
+const convertedVapidKey = urlBase64ToUint8Array("BCy4_Cue4SCIUUuJRT_jMziETDozLgUkYK0D7W9vNrMOlzObknhpLEFQa_Brjvkr9EeLh817uG7AWi00Jc07HRw")
 
 function urlBase64ToUint8Array(base64String) {
   const padding = "=".repeat((4 - base64String.length % 4) % 4)
@@ -15,58 +15,43 @@ function urlBase64ToUint8Array(base64String) {
 }
 
 function sendSubscription(subscription) {
-  return fetch(process.env.REACT_APP_SUBSCRIPTION_URL, {
+  return fetch(`http://localhost:9000/notifications/subscribe`, {
     method: 'POST',
     body: JSON.stringify(subscription),
     headers: {
       'Content-Type': 'application/json'
     }
   })
-};
+}
 
-function sendNotification(notification) {
-  return fetch(process.env.REACT_APP_NOTIFICATION_URL, {
+function sendNotificationRequest(subscription) {
+  return fetch(`http://localhost:9000/notifications/push`, {
     method: 'POST',
-    body: JSON.stringify(notification),
+    body: JSON.stringify(subscription),
     headers: {
       'Content-Type': 'application/json'
     }
   })
-};
+}
 
 
-export function reviveNotification() {
+export function getNotification() {
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.ready.then(function(registration) {
       if (!registration.pushManager) {
-        console.log('Push manager unavailable.')
-        alert('Push manager unavailable.');
         return
       }
 
       registration.pushManager.getSubscription().then(function(existedSubscription) {
         if (existedSubscription === null) {
-          console.log('No subscription detected, make a request.')
           registration.pushManager.subscribe({
             applicationServerKey: convertedVapidKey,
             userVisibleOnly: true,
           }).then(function(newSubscription) {
-
-            sendNotification(newSubscription)
-          }).catch(function(e) {
-            if (Notification.permission !== 'granted') {
-              console.log('Permission was not granted.')
-              console.log("error", e);
-              console.log("Notification.permission", Notification.permission)
-              
-            } else {
-              console.error('An error ocurred during the subscription process.', e)
-          
-            }
+            sendNotificationRequest(newSubscription)
           })
         } else {
-          console.log('Existed subscription detected.')
-          sendNotification(existedSubscription)
+          sendNotificationRequest(existedSubscription)
         }
       })
     })
@@ -82,7 +67,6 @@ export function subscribeUser() {
     navigator.serviceWorker.ready.then(function(registration) {
       if (!registration.pushManager) {
         console.log('Push manager unavailable.')
-        alert('Push manager unavailable.');
         return
       }
 
@@ -94,23 +78,19 @@ export function subscribeUser() {
             userVisibleOnly: true,
           }).then(function(newSubscription) {
             console.log('New subscription added.');
-            console.log("newSubscription",newSubscription)
+            console.log("newSubscription",newSubscription);
             sendSubscription(newSubscription)
           }).catch(function(e) {
             if (Notification.permission !== 'granted') {
               console.log('Permission was not granted.')
               console.log("error", e);
               console.log("Notification.permission", Notification.permission)
-              
             } else {
               console.error('An error ocurred during the subscription process.', e)
-          
             }
           })
         } else {
-          console.log('Existed subscription detected.')
-
-          sendSubscription(existedSubscription)
+          console.log('Existed subscription detected.');
         }
       })
     })
