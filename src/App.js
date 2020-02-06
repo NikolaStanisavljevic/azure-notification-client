@@ -16,8 +16,7 @@ function App() {
           </p>
           <p>Subscribe to notification servrvice and recive push notification</p>
           <button onClick={subscribeUser}>Subscribe</button>
-      
-          <button onClick={reviveNotification}>Subscribe</button>
+          <button onClick={reviveNotification}>Send Notification</button>
       </header>
     </div>
   );
