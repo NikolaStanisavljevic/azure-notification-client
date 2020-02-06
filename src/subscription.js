@@ -1,4 +1,4 @@
-const convertedVapidKey = urlBase64ToUint8Array("BCy4_Cue4SCIUUuJRT_jMziETDozLgUkYK0D7W9vNrMOlzObknhpLEFQa_Brjvkr9EeLh817uG7AWi00Jc07HRw")
+const convertedVapidKey = urlBase64ToUint8Array(process.env.REACT_APP_VAPID_KEY)
 
 function urlBase64ToUint8Array(base64String) {
   const padding = "=".repeat((4 - base64String.length % 4) % 4)
@@ -15,7 +15,7 @@ function urlBase64ToUint8Array(base64String) {
 }
 
 function sendSubscription(subscription) {
-  return fetch(`http://localhost:9000/notifications/subscribe`, {
+  return fetch(process.env.REACT_APP_SUBSCRIPTION_URL, {
     method: 'POST',
     body: JSON.stringify(subscription),
     headers: {
@@ -25,7 +25,7 @@ function sendSubscription(subscription) {
 }
 
 function sendNotificationRequest(subscription) {
-  return fetch(`http://localhost:9000/notifications/push`, {
+  return fetch(process.env.REACT_APP_NOTIFICATION_URL, {
     method: 'POST',
     body: JSON.stringify(subscription),
     headers: {
