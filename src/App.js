@@ -1,6 +1,6 @@
 import React from 'react';
 import logo from './logo.svg';
-import { subscribeUser } from './subscription';
+import { subscribeUser, reviveNotification } from './subscription';
 import './App.css';
 
 function App() {
@@ -16,6 +16,8 @@ function App() {
           </p>
           <p>Subscribe to notification servrvice and recive push notification</p>
           <button onClick={subscribeUser}>Subscribe</button>
+      
+          <button onClick={reviveNotification}>Subscribe</button>
       </header>
     </div>
   );
