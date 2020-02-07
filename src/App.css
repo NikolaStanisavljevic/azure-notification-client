@@ -12,7 +12,6 @@ html,
   width: 100%;
   height: 100%;
   background-color: black;
-  width: 100;
   opacity: 0.674;
   z-index: -1;
   background-position: center;
@@ -82,4 +81,28 @@ p {
 
 svg {
   margin: 0 auto;
+}
+
+.event-page {
+  display: flex;
+  flex-direction: column;
+  background-color: #051f0c;
+}
+
+h4 {
+  font-size: 6vmin;
+  color: white;
+  margin: 2rem auto;
+}
+
+.event-img {
+  width: 100%;
+  max-width: 60rem;
+  margin: 0 auto;
+}
+
+.event-logo {
+  width: 30vmin;
+  margin: 0 auto;
+  padding-bottom: 2rem;
 }
