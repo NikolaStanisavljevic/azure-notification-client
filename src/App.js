@@ -10,27 +10,37 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faExchangeAlt } from "@fortawesome/free-solid-svg-icons";
 import { faBell } from "@fortawesome/free-solid-svg-icons";
 import { faHourglassStart } from "@fortawesome/free-solid-svg-icons";
+
 function App() {
   return (
     <div className="App">
       <div className="navigation">
-        <img src={Logo} className="logo" />
+        <img src={Logo} className="logo" alt="logo" />
         <h1>BLApp Push Notification Demo</h1>
       </div>
 
-      <button onClick={subscribeUser}>
-        <FontAwesomeIcon icon={faExchangeAlt} color="white" />
-        Subscribe
-      </button>
-      <button onClick={getNotification}>
-        <FontAwesomeIcon icon={faBell} color="white" />
-        Send Notification
-      </button>
+      <div className="button-grp">
+        <div className="button-wrap">
+          <p>Subscribe to our service to receive notifications</p>
+          <button onClick={subscribeUser}>
+            <FontAwesomeIcon icon={faExchangeAlt} color="white" />
+          </button>
+        </div>
 
-      <button onClick={getDelayedNotification}>
-        <FontAwesomeIcon icon={faHourglassStart} color="white" />
-        Delayed Notification
-      </button>
+        <div className="button-wrap">
+          <p>Receive Notification</p>
+          <button onClick={getNotification}>
+            <FontAwesomeIcon icon={faBell} color="white" />
+          </button>
+        </div>
+        <div className="button-wrap">
+          <p>Receive delayed notification (60sec)</p>
+          <button onClick={getDelayedNotification}>
+            <FontAwesomeIcon icon={faHourglassStart} color="white" />
+          </button>
+        </div>
+      </div>
+
       <div className="background"></div>
       <div className="mask"></div>
     </div>

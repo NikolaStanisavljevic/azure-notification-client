@@ -25,10 +25,12 @@ html,
 
 .logo {
   margin: 2rem;
+  width: 20vmin;
 }
 h1 {
   color: white;
   align-self: center;
+  font-size: 5.5vmin;
 }
 
 .background {
@@ -47,15 +49,37 @@ h1 {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 button {
-  background-color: #61dafb;
+  height: 8vmin;
+  width: 8vmin;
+  background-color: #051f0c;
+  opacity: 0.8;
   color: white;
-  font-size: 20px;
+  font-size: 3vmin;
   padding: 6px;
   border: none;
   outline: none;
   border-radius: 5px;
   cursor: pointer;
-  display: inline-block;
   margin: 0 20px;
+}
+
+.button-grp {
+  margin-left: 2rem;
+}
+
+.button-wrap {
+  display: flex;
+  align-items: center;
+  margin: 2.5vmin 0;
+}
+
+p {
+  color: white;
+  font-size: 3.5vmin;
+}
+
+svg {
+  margin: 0 auto;
 }
