@@ -29,7 +29,7 @@ function App() {
 
       <button onClick={getDelayedNotification}>
         <FontAwesomeIcon icon={faHourglassStart} color="white" />
-        Send Delayed Notification
+        Delayed Notification
       </button>
       <div className="background"></div>
       <div className="mask"></div>
