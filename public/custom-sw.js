@@ -1,12 +1,12 @@
 function receivePushNotification(event) {
   console.log("[Service Worker] Push Received.");
 
-  const { image, tag, url, title, text } = event.data.json();
-
+  const { image, icon, tag, url, title, text } = event.data.json();
+  console.log(event.data.json())
   const options = {
     data: url,
     body: text,
-    icon: image,
+    icon: icon,
     vibrate: [200, 100, 200],
     tag: tag,
     image: image,
