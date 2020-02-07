@@ -13,7 +13,7 @@ import { faHourglassStart } from "@fortawesome/free-solid-svg-icons";
 
 export default function Home() {
   return (
-    <div>
+    <>
       <div className="navigation">
         <img src={Logo} className="logo" alt="logo" />
         <h1>BLApp Push Notification Demo</h1>
@@ -43,6 +43,6 @@ export default function Home() {
 
       <div className="background"></div>
       <div className="mask"></div>
-    </div>
+    </>
   );
 }
