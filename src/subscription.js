@@ -38,6 +38,16 @@ function sendNotificationRequest(subscription) {
   });
 }
 
+function sendDelayedNotificationRequest(subscription) {
+  return fetch(process.env.REACT_APP_DELAYED_NOTIFICATION_URL, {
+    method: "POST",
+    body: JSON.stringify(subscription),
+    headers: {
+      "Content-Type": "application/json"
+    }
+  });
+}
+
 export function getNotification() {
   if ("serviceWorker" in navigator) {
     navigator.serviceWorker.ready
@@ -90,10 +100,10 @@ export function getDelayedNotification() {
                   userVisibleOnly: true
                 })
                 .then(function(newSubscription) {
-                  sendNotificationRequest(newSubscription);
+                  sendDelayedNotificationRequest(newSubscription);
                 });
             } else {
-              sendNotificationRequest(existedSubscription);
+              sendDelayedNotificationRequest(existedSubscription);
             }
           });
       })
