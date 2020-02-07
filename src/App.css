@@ -12,19 +12,25 @@ html,
   width: 100%;
   height: 100%;
   background-color: black;
-  /* Full height */
   width: 100;
   opacity: 0.674;
   z-index: -1;
-  /* Center and scale the image nicely */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
+.navigation {
+  display: flex;
+}
 
+.logo {
+  margin: 2rem;
+}
 h1 {
   color: white;
+  align-self: center;
 }
+
 .background {
   position: absolute;
   left: 0;
