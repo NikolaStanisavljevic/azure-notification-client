@@ -1230,6 +1230,30 @@
   dependencies:
     prop-types "^15.5.10"
 
+"@ionic/core@5.0.1":
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/@ionic/core/-/core-5.0.1.tgz#20a8070b35bfe5943672506333d7abb07638aef0"
+  integrity sha512-/Vk55ctiQNwvmJRoylM+gFYYzTeDt9OC5l+oRtxTxinWjzSvXrA21ZYxVvACHn1xNbHtHM4L6KJON/qhc6i7JA==
+  dependencies:
+    ionicons "^5.0.0"
+    tslib "^1.10.0"
+
+"@ionic/react-router@^5.0.1":
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/@ionic/react-router/-/react-router-5.0.1.tgz#01123e1c443ea079cf298e2bb67affebf8c4d783"
+  integrity sha512-6JlgARyQJUkbUQvFe9lZEE30wqyVVpg0FlDd9PnGY2Z8VctkcdSx/lBHoQMsMVGNWJFgEzb3Gzze4FoO4We0+g==
+  dependencies:
+    tslib "*"
+
+"@ionic/react@^5.0.1":
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/@ionic/react/-/react-5.0.1.tgz#13622894738804b41930075d4eab7dd5a4f60ad8"
+  integrity sha512-ggIOVFLueQgeHDh2DfCGH6qiMuNvVZB/mi2b/FTYIOMYQL2iAbmAtMCKVTX8NMyMyFSnh6ZXyF0A9534wILWbg==
+  dependencies:
+    "@ionic/core" "5.0.1"
+    ionicons "^5.0.0"
+    tslib "*"
+
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/@mrmlnc/readdir-enhanced/-/readdir-enhanced-2.2.1.tgz#524af240d1a360527b730475ecfa1344aa540dde"
@@ -5402,6 +5426,11 @@ invert-kv@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/invert-kv/-/invert-kv-2.0.0.tgz#7393f5afa59ec9ff5f67a27620d11c226e3eec02"
   integrity sha512-wPVv/y/QQ/Uiirj/vh3oP+1Ww+AWehmi1g5fFWGPF6IpCBCDVrhgHRMvrLfdYcwDh3QJbGXDW4JAuzxElLSqKA==
+
+ionicons@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/ionicons/-/ionicons-5.0.0.tgz#a97c37af0ba48eaafe9c411299af87722ccbbedf"
+  integrity sha512-tqKI5QyqCQOikbWYIA7teJPPXKfYZhEff8ARvbkOIh7PWbKI7sd0IBJcjhbw/mUilIA7U9Bcdm7qGBPhVWOCWg==
 
 ip-regex@^2.1.0:
   version "2.1.0"
@@ -10114,6 +10143,11 @@ ts-pnp@^1.0.0:
   version "1.1.5"
   resolved "https://registry.yarnpkg.com/ts-pnp/-/ts-pnp-1.1.5.tgz#840e0739c89fce5f3abd9037bb091dbff16d9dec"
   integrity sha512-ti7OGMOUOzo66wLF3liskw6YQIaSsBgc4GOAlWRnIEj8htCxJUxskanMUoJOD6MDCRAXo36goXJZch+nOS0VMA==
+
+tslib@*, tslib@^1.10.0:
+  version "1.11.0"
+  resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.11.0.tgz#f1f3528301621a53220d58373ae510ff747a66bc"
+  integrity sha512-BmndXUtiTn/VDDrJzQE7Mm22Ix3PxgLltW9bSNLoeCY31gnG2OPx0QqJnuc9oMIKioYrz487i6K9o4Pdn0j+Kg==
 
 tslib@^1.9.0:
   version "1.10.0"
