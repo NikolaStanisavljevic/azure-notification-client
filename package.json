@@ -2,6 +2,8 @@
   "name": "demo-webpush-react",
   "version": "0.1.0",
   "dependencies": {
+    "@capacitor/core": "1.5.0",
+    "@capacitor/ios": "^1.5.0",
     "@fortawesome/fontawesome-svg-core": "^1.2.27",
     "@fortawesome/free-solid-svg-icons": "^5.12.1",
     "@fortawesome/react-fontawesome": "^0.1.8",
@@ -27,5 +29,8 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "@capacitor/cli": "1.5.0"
+  }
 }
