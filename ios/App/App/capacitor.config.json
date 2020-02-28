@@ -1,1 +1,8 @@
-{}
+{
+  "appId": "com.gearsaid.blapp",
+  "appName": "blapp-push-notification-demo",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "build",
+  "cordova": {}
+}
