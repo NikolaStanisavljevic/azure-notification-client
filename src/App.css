@@ -25,6 +25,7 @@ html,
 .logo {
   margin: 2rem;
   width: 20vmin;
+  height: auto;
 }
 h1 {
   color: white;

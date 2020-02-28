@@ -1,6 +1,6 @@
 {
-  "appId": "io.ionic.starter",
-  "appName": "notification-demo",
+  "appId": "com.gearsaid.blapp",
+  "appName": "blapp-push-notification-demo",
   "bundledWebRuntime": false,
   "npmClient": "npm",
   "webDir": "build",
