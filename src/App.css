@@ -104,6 +104,7 @@ h4 {
 
 .event-logo {
   width: 30vmin;
+  height: auto;
   margin: 0 auto;
   padding-bottom: 2rem;
 }
