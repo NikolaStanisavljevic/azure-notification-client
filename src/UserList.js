@@ -12,7 +12,6 @@ function UserList() {
     axios
       .get("https://azure-test-apis.azurewebsites.net/api/getAllUsers")
       .then(function(response) {
-        console.log(response);
         setUsers(response.data);
       })
       .catch(function(error) {
@@ -20,7 +19,21 @@ function UserList() {
       });
   };
 
-  return <div className="user-list-page"></div>;
+  return (
+    <div className="user-list-page">
+      <div>
+        <p className="users-header">
+          List connected with our azure test application
+        </p>
+        <ul>
+          {users.map(user => {
+            return <li>{user.name}</li>;
+          })}
+        </ul>
+      </div>
+      <div className="users-background"></div>
+    </div>
+  );
 }
 
 export default UserList;
